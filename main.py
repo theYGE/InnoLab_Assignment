@@ -8,7 +8,7 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
-def kaya_equation(pop, gdp, enInt, carbInt):
+def kaya_equation(pop, gdp, enInt, carbInt, output_type = "CO2"):
     '''
     Computes Kaya Identity using the formula:
     co2 = pop * gdp * enInt * carbInt
@@ -27,10 +27,14 @@ def kaya_equation(pop, gdp, enInt, carbInt):
     if (carbInt < 0):
         raise ValueError("carbInt cannot be negative")
 
-
-
     co2 = pop * gdp * enInt * carbInt
-    return co2
+
+    if output_type == 'CO2':
+        return co2
+    else:
+        c = co2 / 3.67
+        return c
+
 
 
 
