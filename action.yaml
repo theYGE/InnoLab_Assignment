@@ -1,11 +1,6 @@
 # action.yaml
 name: 'Install the package'
 description: 'A GitHub Action that installs my package'
-inputs:
-  num:
-    description: 'Enter a number'
-    required: false
-    default: "1"
 runs:
   using: 'composite'
   steps:
@@ -13,9 +8,9 @@ runs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-    - name: Install My Package
-        run: python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps innolab_package_oleksandr_makarevych
-        shell: bash
+#    - name: Install My Package
+#        run: python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps innolab_package_oleksandr_makarevych
+#        shell: bash
     - name: Run Package Tests
         run:  python3 -m unittest discover tests
         shell: bash
