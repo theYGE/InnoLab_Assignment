@@ -6,7 +6,6 @@ inputs:
     description: 'Enter a number'
     required: false
     default: "1"
-outputs:
 runs:
   using: 'composite'
   steps:
