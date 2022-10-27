@@ -13,6 +13,7 @@ jobs:
       - name: Run final CI/CD
         run: |
           python3 -m unittest discover tests
+          python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps innolab_package_oleksandr_makarevych
           echo Done!
         # or use a released GitHub Action
         # uses: shipyard/github-action/fetch-shipyard-env@1.0.0
