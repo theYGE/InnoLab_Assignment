@@ -1,5 +1,5 @@
 import unittest
-from main import kaya_equation
+from src.innolab_package_Oleksandr_Makarevych.main import kaya_equation
 
 class TestKayaEquation(unittest.TestCase):
     def test_value(self):
