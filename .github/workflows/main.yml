@@ -8,8 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Fetch num squared
-        id: get_square
-        uses: ./ # Uses an action in the root directory
+      - name: Test MY CI
+        run: echo Hello, world!
+      - name: Run final CI/CD
+        run: |
+          python3 -m unittest discover tests
+          echo Done!
         # or use a released GitHub Action
         # uses: shipyard/github-action/fetch-shipyard-env@1.0.0
