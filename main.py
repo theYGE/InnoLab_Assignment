@@ -37,6 +37,7 @@ def kaya_equation(pop, gdp, enInt, carbInt):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     result = kaya_equation(82.4, 44, 5, 0.05)
+    print(result)
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
