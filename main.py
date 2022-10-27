@@ -18,6 +18,17 @@ def kaya_equation(pop, gdp, enInt, carbInt):
     :param carbInt:
     :return:
     '''
+    if (pop < 0):
+        raise ValueError("pop cannot be negative")
+    if (gdp < 0):
+        raise ValueError("gdp cannot be negative")
+    if (enInt < 0):
+        raise ValueError("enInt cannot be negative")
+    if (carbInt < 0):
+        raise ValueError("carbInt cannot be negative")
+
+
+
     co2 = pop * gdp * enInt * carbInt
     return co2
 
